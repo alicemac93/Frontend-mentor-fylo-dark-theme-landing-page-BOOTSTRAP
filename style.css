@@ -1,14 +1,17 @@
+
 body{
     background-color: hsl(218, 28%, 13%);
     color: white; 
     font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
-.main .container, 
-footer {
-    padding: 3% 0;
+
+.main .container {
+    padding: 2%;
 }
 a {
     color: white;
+    cursor: pointer;
 }
 img {
   max-width: 100%;
@@ -21,31 +24,59 @@ li {
     list-style: none;
 }
 h1{
-    font-size: 3vw;
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family: "Raleway";
+    padding-bottom: 3%;
+}
+h3{
+ font-size: 1.2rem;
+ font-weight: 700;
+ font-family: "Raleway";
+}
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "Raleway"; 
 }
 button {
     background-color: hsl(198, 60%, 50%);
     border-radius: 25px;
-    width: 200px;
+    min-width: 150px;
     border: none;
     color: white;
-    padding: 1%;
+    padding: 1.5% 2%;
 }
 
 button:hover{
     background-color: hsl(176, 68%, 64%);
     transition: all 700ms;
 }
+
+/* header */
 header, .intro{
     background-color: hsl(217, 28%, 15%);
 }
 
 .navigation {
     text-align: right;
+    font-family: "Raleway";
+    padding: 2% 0;
 }
+.navigation a {
+    padding: 2%;
+}
+.navigation a:hover, svg:hover path {
+    fill: white;
+    color: white;
+    text-decoration: white underline;
+}
+
+/* intro */
 .intro .container {
     position: relative;
-    padding: 0 15%;
+    padding: 3% 10%;
+    margin: 0 auto;
     text-align: center;
     z-index: 10;
 }
@@ -53,44 +84,76 @@ header, .intro{
 .intro {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    background-image: url(./images/bg-curvy-desktop.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.intro::after{
-content: url(./images/bg-curvy-desktop.svg);
-position: absolute;
-bottom: -10px;
-max-width: 100%;
-height: auto;
+.intro-content{
+    width: 70%;
+    margin: 0 auto;
+    padding: 10% 5%;
+    position: relative;
+}
+.intro button{
+    margin: 5%;
 }
 
-.features{
+/* features */
+
+#features{
     padding: 0 2%;
 }
 .feature{
     text-align: center;
     padding: 2% 7%;
 }
+.feature img {
+    padding: 5%;
+}
 
-.item-container {
+/* productivity */
+
+
+#productivity .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2;
+}
+#productivity .content a{
+    color: hsl(198, 60%, 50%);
+    
+}
+#productivity .content a:hover {
+    color: white;
+    text-decoration: underline white;
+}
+#productivity .content a img {
+padding-left: 2%;
+}
+/* testimonal part */
+
+.item-container, 
+.quote {
     background-color: hsl(217, 28%, 15%);
     position: relative;
-    z-index: 10;
+    padding: 6% 4% 2%;
 }
 
-.quote{
-    position: relative;
-    z-index: 5;
-}
 .quote::before {
     content: url(./images/bg-quotes.png);
+    height: 10vw;
     position: absolute;
     left: -10px;
     top: -30px;
-    z-index: -2;
+    z-index: -1;
 }
 .personal-info{
     display: inline-flex;
-    align-items: flex-start;
+    align-items: center;
 }
 .personal-info p {
     padding-left: 10px;
@@ -100,20 +163,103 @@ height: auto;
     width: auto;
     border-radius: 50%;
 }
-footer{
-    background-color: hsl(216, 53%, 9%);
+
+/* cta */
+.cta {
+    position: relative;
+    top: 100px;
+}
+.cta .container {
+    width: 60%;
+    background-color: hsl(217, 28%, 15%);
+    position: relative;
+    z-index: 5;
+    font-family: "Raleway";
+    text-align: center;
+    padding: 2%;
+    border-radius: 12.5px;
+}
+.cta-content {
+padding: 0% 10% 1.5%;
+}
+.cta-input:first-child {
+    border-radius: 25px;
+    width: 65%;
+    border: none;
+    padding: 1.5% 1%;
+    margin: 3% 2%;
 }
 
+/* footer */
+footer{
+    position: relative;
+    background-color: hsl(216, 53%, 9%);
+    padding-top: 100px;
+}
+footer .logo{
+padding: 5% 0;
+}
+
+footer .description{
+    display: inline-flex;
+    align-items: flex-start;
+}
+footer img {
+    padding-right: 8%;
+}
+.footer-nav li {
+    line-height: 2;
+}
+.footer-nav li a:hover {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.circle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: white 0.5px solid;
+    border-radius: 50%;
+    text-align: center;
+    padding: 3%;
+    margin: 2%;
+}
+.circle:hover{
+    border: hsl(198, 60%, 50%) 0.5px solid; 
+}
+
+.socials a:hover{
+    color: hsl(198, 60%, 50%);
+}
+    
+
+@media screen and (max-width: 800px){
+    .intro-content{
+        width: 100%;
+}
 
 @media screen and (max-width: 576px){
     .container{
-        text-align: center;
-        padding: 5%;
+        padding: 10% 5%;
     }
+    footer {
+        padding: 40% 5% 5%
+    }
+    .intro{
+        background-image: url(./images/bg-curvy-mobile.svg);
+    }
+    .item-container{
+        margin: 5%;
+    }
+    .cta .container,
+    .cta .cta-input {
+        width: 80%;
+    }
+
     footer{
         text-align: left;
     }
-    h1 {
-        font-size: 2rem;
-    }
+  
 }

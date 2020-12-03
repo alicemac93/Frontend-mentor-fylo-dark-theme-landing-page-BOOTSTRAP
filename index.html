@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  
+  <script src="https://kit.fontawesome.com/85984ea969.js" crossorigin="anonymous"></script>
+
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 <link rel="stylesheet" href="./style.css">
 </head>
@@ -21,9 +22,9 @@
         </div>
         <div class="col-6 navigation">
           <nav>
-            <a href="">Features</a>
-            <a href="">Team</a>
-            <a href="">Sign In</a>
+            <a href="#features">Features</a>
+            <a href="#productivity">Team</a>
+            <a href="#signup">Sign In</a>
       </nav>
     </div>
   </div>
@@ -36,15 +37,15 @@
         <img src="./images/illustration-intro.png" alt="">
       </div>
       <div class="col-12 intro-content">
-      <h1>All your files in one secure location, accessible anywhere.</h1>
-      <p>Fylo stores all your most important files in one secure location. Access them wherever 
-      you need, share and collaborate with friends family, and co-workers.</p>
-      <button>Get Started</button>
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>Fylo stores all your most important files in one secure location. Access them wherever 
+        you need, share and collaborate with friends family, and co-workers.</p>
+        <button>Get Started</button>
     </div>
     </div>
   </section>
 
-    <section class="features container">
+    <section id="features" class="container">
     <div class="row">
       <div class="feature col-12 col-sm-6">
         <img src="./images/icon-access-anywhere.svg" alt="icon access anywhere">
@@ -74,18 +75,23 @@
     </div>
     </section>
 
-    <section class="productivity container">
+    <section id="productivity" class="container">
       <div class="row">
       <div class="col-sm-6">
         <img src="./images/illustration-stay-productive.png" alt="illustration stay productive">
       </div>
-      <div class="col-sm-6">
-        <h1>Stay productive, wherever you are</h1>
+      <div class="col-sm-6 content">
+        <h1>Stay productive,<br> wherever you are</h1>
         <p>  Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
           storage needs.
           Securely share files and folders with friends, family and colleagues for live collaboration. No email 
           attachments required.</p>
+          <div>
           <a href="">See how Fylo works</a>
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+            <circle id="b" cx="6" cy="6" r="6"/><filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a"><feOffset in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0" in="shadowBlurOuter1"/></filter></defs><g fill="none" fill-rule="evenodd"><g transform="translate(2 2)"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use fill="#62E0D9" xlink:href="#b"/></g><path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#1B2330"/></g>
+          </svg>
+        </div>
       </div> 
     </div>     
     </section>
@@ -127,25 +133,30 @@
     </div>
     </section>
 
-    <section class="cta">
+    <section id="signup" class="cta">
       <div class="container">
-        <h2>Get early access today</h2>
-        <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
-        questions, our support team would be happy to help you.</p>
-        <div>
-          <input type="text">
-          <button>Get Started For Free</button>
+        <div class="cta-content">
+          <h2>Get early access today</h2>
+          <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
+         questions, our support team would be happy to help you.</p>
         </div>
+        <form action="" method="POST">
+              <input class="cta-input" placeholder="email@example.com" name="email" type="email" pattern="[.+\@.+\..+]" required>
+              <button class="cta-input" >Get Started For Free</button>
+        </form>
       </div>
     </section>
   </div>
     <footer>
       <div class="container">
+        <img class="logo" src="./images/logo.svg" alt="logo">
         <div class="row">
       <div class="col-md-4 col-sm-8">
-        <img src="./images/logo.svg" alt="logo">
-        <p><span><img src="./images/icon-location.svg" alt=""></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+        <div class="description">
+          <img src="./images/icon-location.svg" alt="">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
           dolore magna aliqua</p>
+        </div>
       </div> 
       <div class="col-md-2 col-sm-4">
         <div class="phone">
@@ -171,16 +182,16 @@
           </ul>
         </div>
         <div class="socials col-md-2 col-sm-4">
-          <a href=""><img src="" alt=""> </a>
-          <a href=""><img src="" alt=""> </a>
-          <a href=""><img src="" alt=""> </a>
+          <span class="circle"><a href=""><i class="fab fa-facebook-f"></i></a></span>
+          <span class="circle"><a href=""><i class="fab fa-twitter"></i></a></span>
+          <span class="circle"><a href=""><i class="fab fa-instagram"></i></a></span>
         </div>
     </div>
     </div>
 </footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Alice Maciejewska</a>.
     </p>
 
 </body>
