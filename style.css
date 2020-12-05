@@ -54,6 +54,9 @@ button:hover{
 }
 
 /* header */
+header{
+    padding: 2% 0%;
+}
 header, .intro{
     background-color: hsl(217, 28%, 15%);
 }
@@ -138,7 +141,7 @@ padding-left: 2%;
 
 .item-container, 
 .quote {
-    background-color: hsl(217, 28%, 15%);
+    background-color: hsl(219, 30%, 18%);
     position: relative;
     padding: 6% 4% 2%;
 }
@@ -215,16 +218,24 @@ footer img {
     text-decoration: none;
     font-weight: 700;
 }
+.socials {
+    display: inline-flex;
+}
 
 .circle {
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border: white 0.5px solid;
     border-radius: 50%;
-    text-align: center;
-    padding: 3%;
-    margin: 2%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.circle img {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
 }
 .circle:hover{
     border: hsl(198, 60%, 50%) 0.5px solid; 
@@ -241,7 +252,8 @@ footer img {
 }
 
 @media screen and (max-width: 576px){
-    .container{
+    .container,
+    .main .container{
         padding: 10% 5%;
     }
     footer {
@@ -251,15 +263,16 @@ footer img {
         background-image: url(./images/bg-curvy-mobile.svg);
     }
     .item-container{
-        margin: 5%;
+        margin: 5% 0%;
     }
     .cta .container,
     .cta .cta-input {
         width: 80%;
     }
+    .logo{
+        width: 70%;
 
-    footer{
-        text-align: left;
     }
+
   
 }
