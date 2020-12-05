@@ -232,20 +232,12 @@ footer img {
     align-items: center; 
     justify-content: center;
 }
-.circle img {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-}
+
 .circle:hover{
     border: hsl(198, 60%, 50%) 0.5px solid; 
-}
-
-.socials a:hover{
     color: hsl(198, 60%, 50%);
 }
-    
-
+   
 @media screen and (max-width: 800px){
     .intro-content{
         width: 100%;
